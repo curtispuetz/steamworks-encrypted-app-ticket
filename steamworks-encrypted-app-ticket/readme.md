@@ -14,4 +14,4 @@ The integration test uses each function: [tests/real_ticket.rs](tests/real_ticke
 
 # License
 
-This crate is dual-licensed under Apache and MIT, except for the files in [steamworks-encrypted-app-ticket-sys/vendor/]
+This crate is dual-licensed under Apache and MIT, except for the files in steamworks-encrypted-app-ticket-sys/vendor/
