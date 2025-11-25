@@ -9,7 +9,7 @@ keywords = ["steam", "steamworks", "authentication", "gamedev"]
 categories = ["api-bindings", "game-development", "authentication"]
 
 [dependencies]
-steamworks-encrypted-app-ticket-sys = { path = "../steamworks-encrypted-app-ticket-sys" }
+steamworks-encrypted-app-ticket-sys = "0.1.0"
 thiserror = "2.0.17"
 
 [dev-dependencies]
