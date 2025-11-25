@@ -1,2 +1,3 @@
 [workspace]
 members = ["steamworks-encrypted-app-ticket-sys", "steamworks-encrypted-app-ticket"]
+resolver = "3"
