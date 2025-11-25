@@ -3,6 +3,11 @@ name = "steamworks-encrypted-app-ticket-sys"
 version = "0.1.0"
 edition = "2024"
 build = "build.rs"
+license = "MIT OR Apache-2.0"
+description = "Low-level bindings for Steam's sdkencryptedappticket"
+repository = "https://github.com/curtispuetz/steamworks-encrypted-app-ticket"
+keywords = ["steam", "steamworks", "authentication", "gamedev"]
+categories = ["api-bindings", "game-development", "authentication"]
 
 [dependencies]
 libc = "0.2.177"
