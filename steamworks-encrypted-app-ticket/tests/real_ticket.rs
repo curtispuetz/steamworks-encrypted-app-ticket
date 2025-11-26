@@ -1,3 +1,4 @@
+use hex_literal::hex;
 use std::vec;
 
 // tests/real_ticket.rs
@@ -5,7 +6,8 @@ use steamworks_encrypted_app_ticket::*;
 
 // 64 hex chars, from Steamworks App Admin → "App Encryption Key"
 // This is the publicly available one for SpaceWars.
-const APP_KEY_HEX: &str = "ED9386073647CEA58B7721490D59ED445723F0F66E7414E1533BA33CD803BDBD";
+const APP_KEY_HEX: [u8; 32] =
+    hex!("ED9386073647CEA58B7721490D59ED445723F0F66E7414E1533BA33CD803BDBD");
 const APP_ID: u32 = 480; // SpaceWars AppID
 
 #[test]
@@ -20,12 +22,10 @@ fn test_full_decryption_and_validation() {
         37, 71, 106, 4, 162, 103, 191, 160, 44, 55, 12, 148, 131, 111, 224, 111, 78, 219, 83, 81,
         185, 84, 178, 120, 248, 129, 169, 132, 173, 49, 48, 140, 77, 100, 40, 232, 190, 219, 124,
     ];
-    let mut key_bytes = [0u8; 32];
-    hex::decode_to_slice(APP_KEY_HEX, &mut key_bytes).expect("Invalid hex key");
 
     // 2. Decrypt
     let (mut decrypted, len) =
-        b_decrypt_ticket(&encrypted_ticket, &key_bytes).expect("Failed to decrypt real ticket");
+        b_decrypt_ticket(&encrypted_ticket, &APP_KEY_HEX).expect("Failed to decrypt real ticket");
 
     assert!(
         b_is_ticket_for_app(&mut decrypted, len, APP_ID),
