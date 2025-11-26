@@ -1,6 +1,6 @@
 [package]
 name = "steamworks-encrypted-app-ticket"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 license = "MIT OR Apache-2.0"
 description = "Safe Rust wrapper for decrypting Steam Encrypted App Tickets"
@@ -9,7 +9,7 @@ keywords = ["steam", "steamworks", "authentication", "gamedev"]
 categories = ["api-bindings", "game-development", "authentication"]
 
 [dependencies]
-steamworks-encrypted-app-ticket-sys = "0.1.0"
+steamworks-encrypted-app-ticket-sys = "0.1.1"
 thiserror = "2.0.17"
 
 [dev-dependencies]
